@@ -1,5 +1,63 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .carousel.slide.mb30#slide(data-ride="carousel")
+    ol.carousel-indicators
+      li.active(data-target="#slide", data-slide-to="0")
+      li(data-target="#slide", data-slide-to="1")
+      li(data-target="#slide", data-slide-to="2")
+    .carousel-inner(role="listbox")
+      .item.active
+        img(src='/img/img1.jpg')
+      .item
+        img(src='/img/img2.jpg')
+      .item
+        img(src='/img/img3.jpg')
+        .container
+          .carousel-caption
+            h3 에어비앤비와 함께 새로운 여행을 시작하세요.
+
+    a.left.carousel-control(href="#slide" role="button" data-slide="prev")
+      span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+      span.sr-only Previous
+    a.right.carousel-control(href="#slide" role="button" data-slide="next")
+      span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+      span.sr-only Next   
+
+  .container
+    form.form
+     .input-group.mb30
+        input.form-control(type='text', id='q', placeholder='목적지, 도시명, 주소')
+        .input-group-btn
+          button.btn.btn-pink.btn-default.fa.fa-search(type='button') Search
+
+  .container
+    
+    .col-lg-4.col-md-6.col-sm-6.room-border.mb10
+      img(src='')
+      .pt15.pb15
+        h3.title 숙소이름
+        p 숙소위치
+        p 가격
+        a.btn.btn-default(href='#')예약하기
+    .col-lg-4.col-md-6.col-sm-6.room-border.mb10
+      img(src='')
+      .pt15.pb15
+        h3.title 숙소이름
+        p 숙소위치
+        p 가격
+        a.btn.btn-default(href='#')예약하기
+    .col-lg-4.col-md-6.col-sm-6.room-border.mb10
+      img(src='')
+      .pt15.pb15
+        h3.title 숙소이름
+        p 숙소위치
+        p 가격
+        a.btn.btn-default(href='#')예약하기
+    .col-lg-4.col-md-6.col-sm-6.room-border.mb10
+      img(src='')
+      .pt15.pb15
+        h3.title 숙소이름
+        p 숙소위치
+        p 가격
+        a.btn.btn-default(href='#')예약하기
