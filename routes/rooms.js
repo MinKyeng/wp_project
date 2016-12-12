@@ -1,6 +1,6 @@
 var express = require('express'),
-    Room = require('../models/room'),
-    Comment = require('../models/comment');
+    Room = require('../models/Room'),
+    Comment = require('../models/Comment');
 var router = express.Router();
 
 /* GET posts listing. */
