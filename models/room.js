@@ -3,9 +3,9 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var schema = new Schema({
-  name: {type: String, required: true},
-  address: {type: String, required: true},
-  facility: {type: String, required: true},
+  name: {type: String, required: true, trim:true},
+  address: {type: String, required: true, trum:true},
+  facility: {type: Array, required: true},
   fare: {type: Number, required: true},
   rule: {type: String},
   desc: {type: String},

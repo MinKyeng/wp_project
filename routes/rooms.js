@@ -23,16 +23,19 @@ router.get('/new', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   var room = new Room({
-    title: req.body.title,
-    email: req.body.email,
-    content: req.body.content
+    name: req.body.name,
+    address: req.body.address,
+    facility: req.body.facility,
+    fare: req.body.fare,
+    rule: req.body.rule,
+    desc: req.body.desc
   });
 
   room.save(function(err) {
     if (err) {
       return next(err);
     }
-    res.redirect('/rooms');
+    res.redirect('/rooms/list');
   });
 });
 

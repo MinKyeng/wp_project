@@ -17,26 +17,26 @@ block content
           input.form-control(name='name', placeholder='숙소명')
         .form-group
           label(for='address') 주소
-          input.form-control(name='address', placeholder='주소')
+          input.form-control(name='address', placeholder='주소', onclick='openDaumPostcode()')
         .form-group
           span.b 편의시설<br>
-          input(type='checkbox', name='facility', id='toiletries', value='toiletries')
+          input(type='checkbox', name='facility', id='toiletries', value='세면도구')
           label(for='toiletries') 세면도구
-          input(type='checkbox', id='drier', name='facility', value='drier') 
+          input(type='checkbox', id='drier', name='facility', value='헤어 드라이어') 
           label(for='drier') 헤어 드라이어
-          input(type='checkbox', id='heating', name='facility', value='heating')
+          input(type='checkbox', id='heating', name='facility', value='난방')
           label(for='heating') 난방
-          input(type='checkbox', id='airconditioning', name='facility', value='airconditioning')
+          input(type='checkbox', id='airconditioning', name='facility', value='냉방')
           label(for='airconditioning') 냉방
-          input(type='checkbox', id='wifi', name='facility', value='wifi')
+          input(type='checkbox', id='wifi', name='facility', value='무선인터넷')
           label(for='wifi') 무선인터넷
-          input(type='checkbox', id='event', name='facility', value='event')
+          input(type='checkbox', id='event', name='facility', value='이벤트행사가능')
           label(for='event') 이벤트 행사가능
-          input(type='checkbox', id='cooking', name='facility', value='cooking')
+          input(type='checkbox', id='cooking', name='facility', value='조리가능')
           label(for='cooking') 조리가능
-          input(type='checkbox', id='tv', name='facility', value='tv')
+          input(type='checkbox', id='tv', name='facility', value='TV')
           label(for='tv') TV
-          input(type='checkbox', id='grilled', name='facility', value='grilled')
+          input(type='checkbox', id='grilled', name='facility', value='숯불')
           label(for='grilled') 숯불
         .form-group
           label(for='fare') 요금
