@@ -23,7 +23,7 @@ body { padding-top:50px; }
 .btn-pink{ background-color:#ff7e82; border:1px solid #ff7e82; color:#fff; }
 .btn-facebook{ background-color:#3b5998; border:1px solid #3b5998; color:#fff; }
 .btn-new{ background-color:transparent; border:1px solid #ff7e82; color:#ff7e82; }
-.btn-pink, .btn-facebook{ padding:15px 0; }
+/*.btn-pink, .btn-facebook{ padding:15px 0; }*/
 .btn-pink:hover, .btn-facebook:hover{ opacity:0.85; color:#fff; }
 
 /*signin, new*/
@@ -33,7 +33,27 @@ body { padding-top:50px; }
 #sign .icon {position:absolute; left:30px; }
 #sign .input-group { margin-bottom:20px; }
 #sign .input-group input {border-right:0; }
-#sign .input-group-addon {background-color:transparent; padding: 20px 20px; border-color:#e5e5e5;} 
+#sign .input-group-addon {background-color:transparent; padding: 20px 20px; border-color:#e5e5e5;}
+
+/*room*/
+.jumbotron{position:relative; background-color:transparent;}
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  .room-caption-bg{ position:absolute; top:4em; left:10em;  width:34%; background-color:#00a699; padding:30px 20px; } 
+}
+.room-caption-bg{  position:absolute; top:0; left:0;  width:100%; background-color:#00a699; padding:30px 30px; }
+
+.room-caption{ color:#fff; }
+
+#room-index i.fa {color:#00a699;}
+#room-index h4, #room-index h5{ line-height:1.5em; }
+
+#room-new i.fa { color:#00a699; }
+#room-new i span { color:#777; }
+#room-new h3 { margin:10px 0 20px 0; }
+#room-new label{ color:#444; }
+
+
 
 /*footer*/
 .footer { 

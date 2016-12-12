@@ -1,0 +1,66 @@
+extends ../layout
+
+block content
+    #room-index
+        .jumbotron
+            img.img-responsive(src='/img/host1.jpg')
+            .room-caption-bg
+                .room-caption 
+                    h2 호스트가 되어보세요!
+                    h4 꿈에 그리던 여행을 떠나는 등 호스팅 부수입으로 꿈을 이루세요.
+                a.btn.btn-md.btn-pink.btn-default.pr20.pl20.mt20.mb20(href='/rooms/new') 호스팅 시작하기
+
+        .container.mb70
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.mt30.mb30
+                h2 호스트로 등록
+                h4 숙소 등록부터 시작해 보세요. 숙소에 대한 프로필을 작성하는 것과 같습니다.
+
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-home.fa-2x
+                h3 숙소 페이지에 필요한 정보
+                h5 숙소 설명을 입력하고, 사진을 찍어 업로드하고, 가격을 설정하세요. 게스트는 숙소 정보를 보고 회원님의 숙소에 대해 파악할 수 있습니다.
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-users.fa-2x
+                h3 이용 가능 게스트 요건
+                h5 예약 가능 여부 및 숙소 이용 규칙을 설정하세요. 호스트 설정 및 달력 설정 기능을 통해 호스팅을 보다 쉽게 할 수 있습니다.
+
+        .container.mb70
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.mb30
+                h2 숙소 검색 및 예약
+                h4 예약 확인과 함께 게스트의 메시지를 받게 됩니다.
+
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-commenting.fa-2x
+                h3 게스트에게 메시지 보내기
+                h5 온라인이나 앱을 통해 메시지를 보내 게스트에 대해 알아가고 질문에 답할 수 있습니다.
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-suitcase.fa-2x
+                h3 체크인 계획
+                h5 호스트에 따라 게스트를 직접 만나 열쇠를 전달하기도 하고, 출입문 비밀번호를 전달하기도 합니다. 회원님께 편리한 방법을 선택하세요.
+
+
+        .container.mb70
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.mb30
+                h2 게스트 맞이하기
+                h4 아침을 제공하는 호스트도 있고, 보다 자유로운 방식을 선호하는 호스트도 있습니다. 호스팅 방식은 전적으로 회원님이 결정할 수 있습니다.
+
+             .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-shower.fa-2x
+                h3 기본적인 준비
+                h5 대부분의 호스트는 게스트가 사용할 수 있는 모든 공간을 청소하고 깨끗한 침대 시트, 수건, 화장지와 같은 필수품목을 제공합니다.
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-credit-card.fa-2x
+                h3 게스트의 숙박결제
+                h5 에어비앤비가 결제에 관한 모든 부분을 처리하니 회원님이 직접 관여하실 부분은 없습니다. 게스트는 체크인 전에 요금을 납부합니다.
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-money.fa-2x
+                h3 대금 수령 방법
+                h5 페이팔, 계좌 입금, 해외 송금 중에서 대금 수령방법을 선택하실 수 있습니다. 대금은 게스트가 체크인하고 24시간 후에 자동으로 입금됩니다. 간단하죠?
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-tags.fa-2x
+                h3 수입과 수수료
+                h5 에어비앤비에 숙소를 등록하는 것은 무료입니다. 에어비앤비는 모든 예약에 3%의 호스트 서비스 수수료를 부과합니다.
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.mb30
+                i.fa.fa-sliders.fa-2x
+                h3 요금 설정
+                h5 요금은 회원님이 결정합니다. 숙소를 등록하면 비슷한 숙소의 요금과 여행 트렌드를 고려하여 요금을 제안해 주는 도구를 이용할 수 있습니다.

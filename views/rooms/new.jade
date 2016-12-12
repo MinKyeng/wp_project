@@ -1,0 +1,59 @@
+extends ../layout
+
+block content
+  .container.mt30
+    h1 숙소 등록
+    h3 호스트가 될 준비를 시작해보세요.
+
+  .container.mt30#room-new
+    form(action='/rooms', method='POST')
+      .col-lg-12
+        i.fa.fa-check-square-o
+          span.b.ml5 1단계
+        h3 기본정보를 입력하세요.
+
+        .form-group
+          label(for='name') 숙소명
+          input.form-control(name='name', placeholder='숙소명')
+        .form-group
+          label(for='address') 주소
+          input.form-control(name='address', placeholder='주소')
+        .form-group
+          span.b 편의시설<br>
+          input(type='checkbox', name='facility', id='toiletries', value='toiletries')
+          label(for='toiletries') 세면도구
+          input(type='checkbox', id='drier', name='facility', value='drier') 
+          label(for='drier') 헤어 드라이어
+          input(type='checkbox', id='heating', name='facility', value='heating')
+          label(for='heating') 난방
+          input(type='checkbox', id='airconditioning', name='facility', value='airconditioning')
+          label(for='airconditioning') 냉방
+          input(type='checkbox', id='wifi', name='facility', value='wifi')
+          label(for='wifi') 무선인터넷
+          input(type='checkbox', id='event', name='facility', value='event')
+          label(for='event') 이벤트 행사가능
+          input(type='checkbox', id='cooking', name='facility', value='cooking')
+          label(for='cooking') 조리가능
+          input(type='checkbox', id='tv', name='facility', value='tv')
+          label(for='tv') TV
+          input(type='checkbox', id='grilled', name='facility', value='grilled')
+          label(for='grilled') 숯불
+        .form-group
+          label(for='fare') 요금
+          input.form-control(name='fare', placeholder='요금')
+        
+      .col-lg-12.mt50
+        i.fa.fa-check-square-o
+          span.b.ml5 2단계
+        h3 추가정보를 입력하세요.
+
+        .form-group
+          label(for='rule') 이용규칙
+          input.form-control(name='rule', placeholder='이용규칙')
+        .form-group
+          label(for='desc') 간단한 설명
+          input.form-control(name='desc', placeholder='간단한 설명')
+      
+      hr.mt50
+
+      button.btn.btn-md.btn-pink.btn-block.mt30(type='submit') 숙소 등록하기 
