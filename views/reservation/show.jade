@@ -1,48 +1,14 @@
 extends ../layout
 
 block content
-  .container.mt30
-    .blog-header
-      h2.blog-title= room.name
-      p.lead.blog-description= room.address
-
-    .blog-post.mt30
-      h3 상세설명
-      hr
-      .row
-        .col-lg-3.col-md-3.col-sm-3.col-xs-3 
-          h4 시설
-        .col-lg-9.col-md-9.col-sm-9.col-xs-9
-          h5= room.facility
-      .row
-        .col-lg-3.col-md-3.col-sm-3.col-xs-3 
-          h4 이용규칙
-        .col-lg-9.col-md-9.col-sm-9.col-xs-9
-          h5= room.rule
-      .row  
-        .col-lg-3.col-md-3.col-sm-3.col-xs-3 
-          h4 설명
-        .col-lg-9.col-md-9.col-sm-9.col-xs-9
-          h5= room.desc
-
-    .blog-post.mt30
-      h3 후기
-        small(#{room.numComment})
-      hr
-      .container
-        each comment in comments
-          .row= moment(comment.createdAt).format('YYYY/MM/DD')          
-          .row= comment.content
-  
-      form.form-inline(action='/room/' + room._id + '/comments', method='POST')
-        .form-group
-          label.sr-only(for='email') email
-          input.form-control(name='email', placeholder='email')
-        .form-group
-          label.sr-only(for='content') content
-          input.form-control(name='content', size=50, placeholder='content')
-        button.btn.btn-info 댓글저장
-        
-      hr
-      a.btn.btn-mini.btn-new(href='/room/list') 목록 
-  
+  .container
+    h3 예약확인
+    p
+      b= reservation.name
+      | 
+      span at #{moment(reservation.createdAt).format('YYYY-MM-DD HH:mm:ss')} 
+      | 
+    p.well(style='white-space:pre;') 체크인 #{reservation.checkin}
+    p.well(style='white-space:pre;') 체크아웃 #{reservation.checkout}
+    
+    a.btn.btn-default(href='/reservation') 목록

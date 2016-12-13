@@ -3,6 +3,8 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var schema = new Schema({
+    name: {type:String, require:true},
+    email: {type:String, require:true},
     checkin:{type: Date},
     checkout:{type: Date},
     createdAt: {type: Date, default: Date.now}
