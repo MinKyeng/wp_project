@@ -2,13 +2,13 @@ extends ../layout
 
 block content
   .container
-    h3 예약확인
+    h2.page-header 예약확인
     p
       b= reservation.name
       | 
       span at #{moment(reservation.createdAt).format('YYYY-MM-DD HH:mm:ss')} 
       | 
-    p.well(style='white-space:pre;') 체크인 #{reservation.checkin}
-    p.well(style='white-space:pre;') 체크아웃 #{reservation.checkout}
+    .pt30.pb30.pl20.pr20.mb30(style='background-color:#eee')
+      div 체크인 #{moment(reservation.checkin).format('YYYY-MM-DD')}, 체크아웃 #{moment(reservation.checkout).format('YYYY-MM-DD')}
     
     a.btn.btn-default(href='/reservation') 목록

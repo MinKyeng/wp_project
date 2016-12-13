@@ -23,15 +23,15 @@ router.get('/new', function(req, res, next) {
 
 //글 읽기
 router.get('/:id', function(req, res, next) {
-  Reservation.findById(req.params.id, function(err, post) {
+  Reservation.findById(req.params.id, function(err, reservation) {
     if (err) {
       return next(err);
     }
-    post.save(function(err){//save 메소드를 호출해 저장.
+    reservation.save(function(err){//save 메소드를 호출해 저장.
       if(err){
         return next(err);      
       }
-      res.render('reservation/show', {post: post});
+      res.render('reservation/show', {reservation: reservation});
     });
     
   });
@@ -40,7 +40,7 @@ router.get('/:id', function(req, res, next) {
 //글쓰기 
 //post : 서버에게 resource를 보내면서 생성해달라고 요청.
 router.post('/', function(req, res, next) {
-  Reservation.findOne({email: req.body.email}, function(err, post) { //findOne : 인자로 넘겨 받은 오브젝트에 해당하는 데이터를 하나 찾는다.
+  Reservation.findOne({email: req.body.email}, function(err, reservation) { //findOne : 인자로 넘겨 받은 오브젝트에 해당하는 데이터를 하나 찾는다.
     if (err) {
       return next(err);
     }   
