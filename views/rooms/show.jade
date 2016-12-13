@@ -43,6 +43,9 @@ block content
           input.form-control(name='content', size=50, placeholder='content')
         button.btn.btn-info 댓글저장
         
+        
       hr
-      a.btn.btn-mini.btn-new(href='/room/list') 목록 
+      if(currentUser)
+          a.pull-left.btn.btn-mini.btn-new(href='/reservation/new') 예약
+      a.pull-right.btn.btn-mini.btn-new(href='/rooms/list') 목록 
   

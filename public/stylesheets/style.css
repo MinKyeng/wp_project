@@ -26,6 +26,9 @@ body { padding-top:50px; }
 /*.btn-pink, .btn-facebook{ padding:15px 0; }*/
 .btn-pink:hover, .btn-facebook:hover{ opacity:0.85; color:#fff; }
 
+.img-circle{ width:140px; }
+.marketing h5 {line-height:1.5em}
+
 /*signin, new*/
 
 #sign input{ border-color:#e5e5e5; height:60px; border-top-left-radius:3px; border-bottom-left-radius:3px; }
