@@ -8,6 +8,7 @@ var session = require('express-session');
 var methodOverride = require('method-override');
 var flash = require('connect-flash');
 var mongoose   = require('mongoose');
+var passport = require('passport');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -50,6 +51,7 @@ app.use(function(req, res, next) {
   res.locals.flashMessages = req.flash();
   next();
 });
+
 
 app.use('/', routes);
 app.use('/users', users);

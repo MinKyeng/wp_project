@@ -9,6 +9,7 @@ var schema = new Schema({
   fare: {type: Number, required: true},
   rule: {type: String},
   desc: {type: String},
+  read: {type: Number, default:0},
   numComment: {type: Number, default: 0},
   createdAt: {type: Date, default: Date.now}
 }, {

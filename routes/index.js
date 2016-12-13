@@ -1,5 +1,6 @@
 var express = require('express'),    
-    User = require('../models/User');
+    User = require('../models/User'),    
+    Room = require('../models/room');
 var router = express.Router();
 
 /* GET home page. */
@@ -10,6 +11,7 @@ router.get('/', function(req, res, next) {
 router.get('/signin', function(req, res, next) {
   res.render('signin');
 });
+
 
 router.post('/signin', function(req, res, next) {
   User.findOne({email: req.body.email}, function(err, user) {

@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  .container
+    h1 숙소 목록
+    
+    table.table
+      tr
+        th 숙소명
+        th 위치
+        th 시설
+        th 요금
+        th 
+      each room in rooms
+        tr
+          td
+            a(href='/rooms/#{room.id}')= room.name
+          td= room.address
+          td= room.facility
+          td= room.fare
+          td
+            a.btn.btn-mini.btn-new(href='#') 예약
