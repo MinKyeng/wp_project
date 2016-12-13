@@ -8,6 +8,7 @@ var schema = new Schema({
     email: {type:String, require:true},
     checkin:{type: Date, require:true},
     checkout:{type: Date, require:true},
+    member:{type: Number},
     createdAt: {type: Date, default: Date.now}
 }, {
   toJSON: {virtuals: true },

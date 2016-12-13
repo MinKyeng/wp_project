@@ -10,6 +10,7 @@ block content
       | 
     .pt30.pb30.pl20.pr20.mb30(style='background-color:#eee')
       div= reservation.name
+      div 숙박인원 #{reservation.member}명
       div 체크인 #{moment(reservation.checkin).format('YYYY-MM-DD')}, 체크아웃 #{moment(reservation.checkout).format('YYYY-MM-DD')}
     
     a.btn.btn-default(href='/reservation') 목록

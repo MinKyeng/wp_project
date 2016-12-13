@@ -37,10 +37,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method', {methods: ['POST', 'GET']}));
 
+var MongoStore = require('connect-mongo')(session);
+app.sessionStore = new MongoStore({mongooseConnection: mongoose.connection});
 app.use(session({
   resave: true,
+  key: 'express.sid',
   saveUninitialized: true,
-  secret: 'long-long-long-secret-string-1313513tefgwdsvbjkvasd'
+  secret: 'long-long-long-secret-string-1313513tefgwdsvbjkvasd',
+  store: app.sessionStore
 }));
 app.use(flash());
 

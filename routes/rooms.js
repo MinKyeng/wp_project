@@ -30,8 +30,7 @@ router.get('/:id', function(req, res, next) {
   Room.findById(req.params.id, function(err, room) {
     if (err) {
       return next(err);
-    }
-    room.read+=1; //조회수를 1 증가
+    }    
     Comment.find({room: room.id}, function(err, comments) {
       if (err) {
         return next(err);
@@ -62,7 +61,7 @@ router.post('/', function(req, res, next) {
 router.post('/:id/comments', function(req, res, next) {
   var comment = new Comment({
     room: req.params.id,
-    email: req.body.email,
+    writer: req.body.writer,
     content: req.body.content
   });
 
@@ -78,6 +77,7 @@ router.post('/:id/comments', function(req, res, next) {
     });
   });
 });
+
 
 module.exports = router;
 

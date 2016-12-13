@@ -3,9 +3,9 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var schema = new Schema({
-  room: {type: Schema.Types.ObjectId, required: true, trim: true},
-  email: {type: String, required: true, trim: true},
-  content: {type: String, required: true, trim: true},
+  room: {type: Schema.Types.ObjectId, required: true},
+  writer: {type: String, required: true},
+  content: {type: String, required: true},
   createdAt: {type: Date, default: Date.now}
 }, {
   toJSON: {virtuals: true},

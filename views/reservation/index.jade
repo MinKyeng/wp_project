@@ -8,6 +8,7 @@ block content
       thead
         tr
           th 작성자
+          th 숙박인원
           th 체크인
           th 체크아웃
           th 작성일
@@ -16,6 +17,7 @@ block content
           tr
             td
               a(href='/reservation/#{reservation.id}')= reservation.writer
+            td= reservation.member
             td= moment(reservation.checkin).format('YYYY-MM-DD')
             td= moment(reservation.checkout).format('YYYY-MM-DD')
             td= moment(reservation.createdAt).format('YYYY-MM-DD HH:mm:ss')

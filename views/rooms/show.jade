@@ -29,17 +29,23 @@ block content
       h3 후기
         small(#{room.numComment})
       hr
-      .container
+      table.table
+        tr
+          th email
+          th content
+          th time
         each comment in comments
-          .row= moment(comment.createdAt).format('YYYY/MM/DD')          
-          .row= comment.content
+          tr
+            td= comment.writer
+            td= comment.content
+            td= moment(comment.createdAt).format('YYYY/MM/DD')
   
-      form.form-inline(action='/room/' + room._id + '/comments', method='POST')
+      form.form-inline(action='/rooms/' + room._id + '/comments', method='POST').mt20
         .form-group
-          label.sr-only(for='email') email
-          input.form-control(name='email', placeholder='email')
+          label.sr-only(for='writer') 작성자
+          input.form-control(name='writer', placeholder='writer')
         .form-group
-          label.sr-only(for='content') content
+          label.sr-only(for='content')
           input.form-control(name='content', size=50, placeholder='content')
         button.btn.btn-info 댓글저장
         

@@ -49,7 +49,8 @@ router.post('/', function(req, res, next) {
       name: req.body.name,    
       email: req.body.email,
       checkin: req.body.checkin,
-      checkout: req.body.checkout
+      checkout: req.body.checkout,
+      member: req.body.member
     });
 
     newPost.save(function(err) { //save 메소드를 호출해 저장.
