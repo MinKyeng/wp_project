@@ -6,10 +6,13 @@ block content
 
     form(action ="/reservation", method='POST')
       .form-group
-        label(for='name') name
+        label(for='writer') 예약자
+        input.form-control(type='text', name='writer')
+      .form-group
+        label(for='name') 숙소명
         input.form-control(type='text', name='name')
       .form-group
-        label(for='email') Email address
+        label(for='email') 예약자 이메일
         input.form-control(type='email', id='email', name='email', placeholder='Email')
       .form-group
         label(for='checkin') Checkin

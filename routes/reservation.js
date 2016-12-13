@@ -45,6 +45,7 @@ router.post('/', function(req, res, next) {
       return next(err);
     }   
     var newPost = new Reservation({
+      writer: req.body.writer,
       name: req.body.name,    
       email: req.body.email,
       checkin: req.body.checkin,
