@@ -56,7 +56,7 @@ router.post('/', function(req, res, next) {
       if (err) {
         return next(err);
       } else {
-        res.redirect('/reservation/index');
+        res.redirect('/reservation');
       }
     });
   });

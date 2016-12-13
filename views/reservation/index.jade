@@ -15,9 +15,9 @@ block content
         each reservation in reservations
           tr
             td
-              a(href='/reservation/#{reservation.id}')= reservation.name
+              a(href='/reservation/#{reservation.id}')= reservation.writer
             td= moment(reservation.checkin).format('YYYY-MM-DD')
-            td= moment(reservation.checkin).format('YYYY-MM-DD')
+            td= moment(reservation.checkout).format('YYYY-MM-DD')
             td= moment(reservation.createdAt).format('YYYY-MM-DD HH:mm:ss')
 
     //-a.btn.btn-primary(href='/reservation/new') 글쓰기
